@@ -89,12 +89,6 @@ public final class CalendarViewProxy: ObservableObject {
     return _calendarView
   }
 
-  weak var _calendarView: CalendarView? {
-    didSet {
-      if oldValue != nil, _calendarView != oldValue {
-        fatalError("Attempted to use an existing `CalendarViewProxy` instance with a new `CalendarViewRepresentable`.")
-      }
-    }
-  }
+  weak var _calendarView: CalendarView?
 
 }
